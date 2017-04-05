@@ -1,5 +1,7 @@
 # DevCamp Portfolio
 
+> This is a ruby on rails application
+ 
 ### Features
 
 - Real time chat
