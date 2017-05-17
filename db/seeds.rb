@@ -1,7 +1,16 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+    )
+end
+
+puts "3 Topics created"
+
 10.times do |blog|
   Blog.create!(
     title: "My pet turtle #{blog}",
-    body: "I had a turtle once."
+    body: "I had a turtle once.",
+    topic_id: Topic.last.id
     )
 end
 
@@ -16,14 +25,26 @@ end
 
 puts "5 skills created "
 
-9.times do |portfolio_item|
+8.times do |portfolio_item|
   Portfolio.create!(
-    title: "Portfolio title #{portfolio_item}" ,
-    subtitle:"My great service #{portfolio_item}" ,
+    title: "Portfolio title" ,
+    subtitle:"Ruby on Rails" ,
     body: "The body of a bird is like unto a baby seal,
     they both are somthing that I dont think about too much",
     main_image: "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
     thumb_image: "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97200&w=350&h=200",
     )
 end
-puts "9 portfolios items created"
+puts "8 portfolios items created"
+
+1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title" ,
+    subtitle:"Angular #{portfolio_item}" ,
+    body: "The body of a bird is like unto a baby seal,
+    they both are somthing that I dont think about too much",
+    main_image: "https://placeholdit.imgix.net/~text?txtsize=33&txt=600%C3%97400&w=600&h=400",
+    thumb_image: "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97200&w=350&h=200",
+    )
+end
+puts "one portfolio_item created"
