@@ -1,6 +1,6 @@
 class Portfolio < ApplicationRecord
+  has_many :technologies
   include Placeholder
-
   validates_presence_of :title, :body
   #the self refers to an indvidual item, portfolio 
   def self.angular
@@ -16,3 +16,4 @@ class Portfolio < ApplicationRecord
     thumb_image ||= Placeholder.image_generator(height: '350', width: '200')
   end
 end
+  
